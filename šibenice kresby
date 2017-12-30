@@ -1,12 +1,6 @@
-šibenice0 = 
-(------
--    - 
--    O
--    -
--  / - \
--    -
--   / \
--  /   \
-__________)
-print(šibenice0)
-
+hangman_0 == 0
+hangman 0 = 5 životů
+            "Super kresba Šibenice"
+hangman_1 == 1
+hangman_1 = 4 životů
+            "Super kresba Šibenice"

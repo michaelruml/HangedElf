@@ -19,7 +19,8 @@ hangman = hangman + 1
 print(hangman) #každý hangman bude mít svoji hodnotu od 0 po 5 (nebo něco) 
 print(hidden_word)
     
-input("do you wish to plaz again?": )  #input pro x
+# vyřeším později   
+# on/off = input("do you wish to plaz again?": )  #input pro x
     if input != no ; != yes
         print("youre a dumbass")
 
