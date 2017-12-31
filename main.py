@@ -9,19 +9,21 @@ if len(input_word) == 0:
 elif len(input_word) >= 1:
     print("write just one letter, not a whole essay")
 
-if input_word =    #jednomu prvku ze seznamu
+if input_word in list:
     print(hangman)
     hidden_word[letters[input_word]] == input_word
-    print hidden_word
-
-else print("wrong letter",)
-hangman = hangman + 1
-print(hangman) #každý hangman bude mít svoji hodnotu od 0 po 5 (nebo něco) 
-print(hidden_word)
+    print(hidden_word)
+    
+    print("wrong letter")
+    hangman = hangman + 1
+    print(hangman) #každý hangman bude mít svoji hodnotu od 0 po 5 (nebo něco) 
+    print(hidden_word)
     
 # vyřeším později   
 # on/off = input("do you wish to plaz again?": )  #input pro x
-    if input != no ; != yes
+x = yes
+x = input("do you wish to play agiain(type yes or no):")
+if x != yes:
         print("youre a dumbass")
 
 
