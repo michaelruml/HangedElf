@@ -21,7 +21,7 @@ while hidden_word != letters:
         print(hidden_word)
     
 # vyřeším později   
-# on/off = input("do you wish to plaz again?": )  #input pro x
+# on/off = input("do you wish to plaz again?": )  #input pro x g
 
 
 
