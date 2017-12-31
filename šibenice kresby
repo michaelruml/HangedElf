@@ -1,7 +1,5 @@
-hangman_0 == 0
-hangman 0 = 5 životů
-            "Super kresba Šibenice"
-hangman_1 == 1
-hangman_1 = 4 životů
-            "Super kresba Šibenice"
-print(hangman_0)
+hangman_0 = "you have 5 lives left"
+hangman_1 = "you have 4 lives left"
+hangman_2 = "you have 3 lives left"
+hangman_3 = "you have 2 lives left"
+hangman_4 = "you have 1 life left"
