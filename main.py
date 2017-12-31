@@ -10,7 +10,6 @@ while hidden_word != letters:
        print("Yout didnt write anything")
     elif len(input_word) >= 1:
         print("write just one letter, not a whole essay")
-
     position = word.index(input_word) 
     if input_word in letters:
         print(hangman)
