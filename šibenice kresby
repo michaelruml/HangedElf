@@ -4,3 +4,4 @@ hangman 0 = 5 životů
 hangman_1 == 1
 hangman_1 = 4 životů
             "Super kresba Šibenice"
+print(hangman_0)
