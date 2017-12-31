@@ -1,4 +1,4 @@
-word = words.csv #seznamslov
+word = "auto" #seznamslov #importnu to později
 hidden_word = "_ "*len(word)
 print(hidden_word)
 letters = list(word)  #seznam vytvořený z jendnotlivych písmen ve slove ##vyřeším to potom 
@@ -9,7 +9,7 @@ if len(input_word) == 0:
 elif len(input_word) >= 1:
     print("write just one letter, not a whole essay")
 
-if input_word in list:
+if input_word in letters:
     print(hangman)
     hidden_word[letters[input_word]] == input_word
     print(hidden_word)
@@ -21,10 +21,10 @@ if input_word in list:
     
 # vyřeším později   
 # on/off = input("do you wish to plaz again?": )  #input pro x
-x = yes
-x = input("do you wish to play agiain(type yes or no):")
-if x != yes:
-        print("youre a dumbass")
+x = int(0)
+x = input("do you wish to play agiain(typE 1 OR 0):")
+if x != 0:
+    print("youre a dumbass")
 
 
 
