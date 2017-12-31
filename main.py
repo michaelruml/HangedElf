@@ -3,16 +3,18 @@ hidden_word = ["_ "*len(word)]
 print(hidden_word)
 letters = list(word)  #seznam vytvořený z jendnotlivych písmen ve slove ##vyřeším to potom 
 hangman = print("a")
+
 while hidden_word != letters:
     input_word = input("what letter are you guessing?:")
     if len(input_word) == 0:
        print("Yout didnt write anything")
     elif len(input_word) >= 1:
         print("write just one letter, not a whole essay")
-    letters.find(input word)
+  
+    word.find(input_word) = position
     if input_word in letters:
         print(hangman)
-        hidden_word[] = input_word
+        hidden_word[position] = input_words
         print(hidden_word)
     else:
         print("wrong letter")
