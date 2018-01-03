@@ -32,6 +32,7 @@ while playing == "yes" :
             if input_word in letters:
                 position = word.index(input_word)
                 hidden_word[position] = input_word
+                
                 print(hidden_word)
             else:
                 print(hidden_word)
