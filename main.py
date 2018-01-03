@@ -1,5 +1,18 @@
-word = "auto"
-hidden_word = ["_ "*len(word)]
+import random
+file = open("words.csv", "r") 
+word_list = file.read()
+print(word_list)
+word_split = word_list.split("_")
+print(word_split)
+from random import randrange
+random_index = randrange(0,len(word_split))
+word  = word_split[random_index]
+print(word)
+#hidden_word = ["_ "*len(word)]
+hidden_word = []
+for x in range(len(word)):
+    hidden_word.append("_")
+
 letters = list(word)  #seznam vytvořený z jendnotlivych písmen ve slove ##vyřeším to potom    
 
 print(hidden_word) #_ _ _ _
@@ -7,11 +20,6 @@ print(hidden_word) #_ _ _ _
 playing = "yes"
 
 lives = 0
-hangman_0 = "you have 4 lives left"
-hangman_1 = "you have 3 lives left"
-hangman_2 = "you have 2 lives left"
-hangman_3 = "you have 1 life left"
-hangman_4 = "you have 0 lives left"
 
 while playing == "yes" :
     while hidden_word != letters:
@@ -29,16 +37,8 @@ while playing == "yes" :
                 print(hidden_word)
                 print("wrong letter")
                 lives = lives + 1
-                if lives == 0:
-                    print(hangman_0)
-                elif lives == 1:
-                    print(hangman_1)
-                elif lives == 2:
-                    print(hangman_2)
-                elif lives == 3:
-                    print(hangman_3)
-                elif lives == 4:
-                    print(hangman_4)
+                print("You have ", lives, " left.")
+                if lives == 4:
                     print("you lost")
                     playing = input("Play again?(yes or no)")
                        #tohle z nějakého důvodu nefunguje ##if playing != "yes" :
