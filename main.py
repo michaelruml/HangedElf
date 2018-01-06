@@ -1,25 +1,63 @@
 import random
+
 file = open("words.csv", "r") 
 word_list = file.read()
-print(word_list)
 word_split = word_list.split("_")
-print(word_split)
+
 from random import randrange
 random_index = randrange(0,len(word_split))
 word  = word_split[random_index]
-print(word)
-#hidden_word = ["_ "*len(word)]
+
+
 hidden_word = []
 for x in range(len(word)):
     hidden_word.append("_")
 
 letters = list(word)  #seznam vytvořený z jendnotlivych písmen ve slove ##vyřeším to potom    
 
+
+def lives1 = print()
+print("/-----")
+print("|    |")
+print("|    ") 
+print("|    ")
+print("|    ")
+print("|________")
+
+
+def lives2:
+    print()
+print("/-----")
+print("|    |")
+print("|    O") 
+print("|    ")
+print("|     ")
+print("|________")
+
+
+def lives3 = print()
+print("/-----")
+print("|    |")
+print("|    O") 
+print("|   /|\ ")
+print("|     ")
+print("|________")
+
+
+
+def lives4 = print()
+print("/-----")
+print("|    |")
+print("|    O") 
+print("|   /|\ ")
+print("|    /\ ")
+print("|________")
+
+
+
 print(hidden_word) #_ _ _ _
-
-playing = "yes"
-
 lives = 0
+playing = "yes"
 
 while playing == "yes" :
     while hidden_word != letters:
@@ -41,6 +79,7 @@ while playing == "yes" :
                 print("You have ", lives, " left.")
                 if lives == 4:
                     print("you lost")
+                    print(lives4)
                     playing = input("Play again?(yes or no)")
                        #tohle z nějakého důvodu nefunguje ##if playing != "yes" :
                            # print("end of the game")
