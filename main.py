@@ -70,18 +70,25 @@ while playing == "yes" :
                 hidden_word[position] = input_letter 
                 print(hidden_word)
                 if hidden_word == letters:
-                        print("Congratuations, you won!")
-                        playing = input("type yes if you wish to continue:")
-                        if playing != "yes":
+                    print("Congratuations, you won!")
+                    playing = input("type yes if you wish to continue:")
+                          if playing != "yes":
                                 print("end of the game it seems")                             
             else:
                 print(hidden_word)
                 print("wrong letter")
                 lives = lives + 1
-                print("You have ", lives, " left.")
-                if lives == 4:
+                if lives == 1:
+                    print(lives1)
+                elif lives == 2:
+                    print(lives2)
+                elif lives == 3:
+                    print(lives3)
+                elif lives == 4:
                     print("you lost")
-                    print(lives4)
+                    #lives4
                     playing = input("Play again?(yes or no)")
-                       #tohle z nějakého důvodu nefunguje ##if playing != "yes" :
-                           # print("end of the game")
+                    if playing != "yes":
+                        print("end of the game")
+                    elif playing == "yes":
+                        print("něco")
