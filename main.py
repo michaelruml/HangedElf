@@ -16,43 +16,41 @@ for x in range(len(word)):
 letters = list(word)  #seznam vytvořený z jendnotlivych písmen ve slove ##vyřeším to potom    
 
 
-def lives1 = print()
-print("/-----")
-print("|    |")
-print("|    ") 
-print("|    ")
-print("|    ")
-print("|________")
+def lives1():
+    print("/-----")
+    print("|    |") 
+    print("|    ") 
+    print("|    ")
+    print("|    ")
+    print("|________")
 
 
-def lives2:
-    print()
-print("/-----")
-print("|    |")
-print("|    O") 
-print("|    ")
-print("|     ")
-print("|________")
+def lives2():
+    print("/-----")
+    print("|    |")
+    print("|    O") 
+    print("|    ")
+    print("|     ")
+    print("|________")
 
 
-def lives3 = print()
-print("/-----")
-print("|    |")
-print("|    O") 
-print("|   /|\ ")
-print("|     ")
-print("|________")
+def lives3():
+    print("/-----")
+    print("|    |")
+    print("|    O") 
+    print("|   /|\ ")
+    print("|     ")
+    print("|________")
 
 
 
-def lives4 = print()
-print("/-----")
-print("|    |")
-print("|    O") 
-print("|   /|\ ")
-print("|    /\ ")
-print("|________")
-
+def lives4():
+    print("/-----")
+    print("|    |")
+    print("|    O") 
+    print("|   /|\ ")
+    print("|    /\ ")
+    print("|________")
 
 
 print(hidden_word) #_ _ _ _
@@ -61,17 +59,21 @@ playing = "yes"
 
 while playing == "yes" :
     while hidden_word != letters:
-        input_word = input("what letter are you guessing?:")
-        if len(input_word) == 0:
+        input_letter = input("what letter are you guessing?:")
+        if len(input_letter) == 0:
             print("You  didnt write anything")
-        elif len(input_word) != 1:
+        elif len(input_letter) != 1:
             print("write just one letter, not a whole essay")
-        elif len(input_word) == 1:
-            if input_word in letters:
-                position = word.index(input_word)
-                hidden_word[position] = input_word
-                
+        elif len(input_letter) == 1:
+            if input_letter in letters:
+                position = word.index(input_letter)
+                hidden_word[position] = input_letter 
                 print(hidden_word)
+                if hidden_word == letters:
+                        print("Congratuations, you won!")
+                        playing = input("type yes if you wish to continue:")
+                        if playing != "yes":
+                                print("end of the game it seems")                             
             else:
                 print(hidden_word)
                 print("wrong letter")
