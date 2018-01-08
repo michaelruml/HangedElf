@@ -72,18 +72,19 @@ while playing == "yes" :
                 if hidden_word == letters:
                     print("Congratuations, you won!")
                     playing = input("type yes if you wish to continue:")
-                          if playing != "yes":
-                                print("end of the game it seems")                             
+                    if playing != "yes":
+                                print("end of the game it seems")
+                    elif playing == "yes":
             else:
                 print(hidden_word)
                 print("wrong letter")
                 lives = lives + 1
                 if lives == 1:
-                    print(lives1)
+                    #lives1
                 elif lives == 2:
-                    print(lives2)
+                    #lives2
                 elif lives == 3:
-                    print(lives3)
+                    #lives3
                 elif lives == 4:
                     print("you lost")
                     #lives4
