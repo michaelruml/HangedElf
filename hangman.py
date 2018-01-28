@@ -15,6 +15,43 @@ letters = list(word) #seznam písmen
 print(hidden_word) #prázdný seznam písmen
 lives = 0
 
+def hangman_1():
+    """
+    /-----
+    |    | 
+    | 
+    |
+    |    
+    |________"""
+
+def hangman_2():
+    """
+    /-----
+    |    | 
+    |    O
+    |
+    |    
+    |________"""
+
+def hangman_3():
+    """
+    /-----
+    |    | 
+    |    O
+    |   /|\
+    |    
+    |________"""
+
+def hangman_4():
+    """
+    /-----
+    |    | 
+    |    O
+    |   /|\
+    |    /\ 
+    |________"""
+
+
 while hidden_word != letters:
     input_letter = input("What letter are you guessing?:")
     if len(input_letter) == 0:
@@ -28,20 +65,21 @@ while hidden_word != letters:
             letters[position] = "."
 
             print(hidden_word)
+
         if hidden_word == letters:
             print("Congratulations, you have won (well, this round)")
         else:
             print("Wrong letter")
             lives = lives + 1
-
+           
             if lives == 1:
-            print(hangman_1)
+                print(hangman_1)
             elif lives == 2:
-            print(hangman_2)
+                print(hangman_2)
             elif lives == 3:
-            print(hangman_3)
+                print(hangman_3)
             elif lives == 4:
-            print(hangman_4)
+                print(hangman_4)
             
             print(hidden_word)
 
