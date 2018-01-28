@@ -22,7 +22,7 @@ def lives1():
     print("|    ") 
     print("|    ")
     print("|    ")
-    print("|________")
+    print("|________") 
 
 
 def lives2():
@@ -65,31 +65,17 @@ while playing == "yes" :
         elif len(input_letter) != 1:
             print("write just one letter, not a whole essay")
         elif len(input_letter) == 1:
-            if input_letter in letters:
-                position = word.index(input_letter)
-                hidden_word[position] = input_letter 
-                print(hidden_word)
+            while input_letter in letters:
+                position = letters.index(input_letter)
+                #pozice písmena ve slove 
+                hidden_word[position] = input_letter
+
+                letters[position] = "."
+
                 if hidden_word == letters:
-                    print("Congratuations, you won!")
+                    print("Congratulations, you won!")
                     playing = input("type yes if you wish to continue:")
                     if playing != "yes":
-                                print("end of the game it seems")
-                    elif playing == "yes":
+                        print("end of the game it seems")
             else:
-                print(hidden_word)
-                print("wrong letter")
-                lives = lives + 1
-                if lives == 1:
-                    #lives1
-                elif lives == 2:
-                    #lives2
-                elif lives == 3:
-                    #lives3
-                elif lives == 4:
-                    print("you lost")
-                    #lives4
-                    playing = input("Play again?(yes or no)")
-                    if playing != "yes":
-                        print("end of the game")
-                    elif playing == "yes":
-                        print("něco")
+                print("něco")
