@@ -15,14 +15,14 @@ letters = list(word) #seznam písmen
 print(hidden_word) #prázdný seznam písmen
 lives = 0
 
-def hangman_1():
-    """
+hangman_1="""
     /-----
     |    | 
     | 
     |
     |    
-    |________"""
+    |________
+    """
 
 def hangman_2():
     """
@@ -49,16 +49,17 @@ def hangman_4():
     |    O
     |   /|\
     |    /\ 
-    |________"""
+    |________
+    """
 
 
 while hidden_word != letters:
     input_letter = input("What letter are you guessing?:")
     if len(input_letter) == 0:
         print("You should probably wrtie something")
-    elif len(input_letter) >= 1:
+    elif len(input_letter) != 1:
         print("Write just one letter, not an entire essay")
-    else:
+    elif len(input_letter) == 1:
         while input_letter in letters:
             position = letters.index(input_letter)
             hidden_word[position] = input_letter
@@ -80,6 +81,8 @@ while hidden_word != letters:
                 print(hangman_3)
             elif lives == 4:
                 print(hangman_4)
+            elif lives == 5:
+                print("Game over")
             
             print(hidden_word)
 
