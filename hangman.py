@@ -24,8 +24,7 @@ hangman_1="""
     |________
     """
 
-def hangman_2():
-    """
+hangman_2="""
     /-----
     |    | 
     |    O
@@ -33,8 +32,7 @@ def hangman_2():
     |    
     |________"""
 
-def hangman_3():
-    """
+hangman_3="""
     /-----
     |    | 
     |    O
@@ -42,8 +40,7 @@ def hangman_3():
     |    
     |________"""
 
-def hangman_4():
-    """
+hangman_4="""
     /-----
     |    | 
     |    O
