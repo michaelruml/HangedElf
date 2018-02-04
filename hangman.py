@@ -53,9 +53,31 @@ hangman_4="""
 while hidden_word != letters:
     input_letter = input("What letter are you guessing?:")
     if len(input_letter) == 0:
-        print("You should probably wrtie something")
+        print("You should probably write something")
+        lives = lives + 1
+        if lives == 1:
+            print(hangman_1)
+        elif lives == 2:
+                print(hangman_2)
+        elif lives == 3:
+            print(hangman_3)
+        elif lives == 4:
+            print(hangman_4)
+            print("Game over")
+            break
     elif len(input_letter) != 1:
         print("Write just one letter, not an entire essay")
+        lives = lives + 1
+        if lives == 1:
+            print(hangman_1)
+        elif lives == 2:
+            print(hangman_2)
+        elif lives == 3:
+            print(hangman_3)
+        elif lives == 4:
+            print(hangman_4)
+            print("Game over")
+            break
     elif len(input_letter) == 1:
         while input_letter in letters:
             position = letters.index(input_letter)
@@ -63,13 +85,11 @@ while hidden_word != letters:
             letters[position] = "."
 
             print(hidden_word)
-
-        if hidden_word == letters:
-            print("Congratulations, you have won (well, this round)")
-        else:
+            if hidden_word == letters:
+                print("Congratulations, you have won (well, this round)")
+        if input_letter != list(letters):
             print("Wrong letter")
             lives = lives + 1
-           
             if lives == 1:
                 print(hangman_1)
             elif lives == 2:
@@ -78,9 +98,8 @@ while hidden_word != letters:
                 print(hangman_3)
             elif lives == 4:
                 print(hangman_4)
-            elif lives == 5:
                 print("Game over")
-            
+                break
             print(hidden_word)
 
             
