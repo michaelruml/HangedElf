@@ -50,6 +50,7 @@ hangman_4="""
     """
 
 
+
 while hidden_word != letters:
     input_letter = input("What letter are you guessing?:")
     if len(input_letter) == 0:
@@ -79,15 +80,15 @@ while hidden_word != letters:
             print("Game over")
             break
     elif len(input_letter) == 1:
-        while input_letter in letters:
-            position = letters.index(input_letter)
-            hidden_word[position] = input_letter
-            letters[position] = "."
-
-            print(hidden_word)
-            if hidden_word == letters:
-                print("Congratulations, you have won (well, this round)")
-        if input_letter != list(letters):
+        if input_letter in letters:     
+            while input_letter in letters:
+                position = letters.index(input_letter)
+                hidden_word[position] = input_letter
+                letters[position] = "."
+                print(hidden_word)
+                if hidden_word == letters:
+                   print("Congratulations, you have won (well, this round)")
+        else:   
             print("Wrong letter")
             lives = lives + 1
             if lives == 1:
